@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CreateInvoiceService } from 'src/app/core/services/create-invoice/create-invoice.service';
 import Invoice from 'src/app/shared/models/invoice.model';
-import { ListInvoiceService } from 'src/app/core/services/list-invoice/list-invoice.service';
 
 
 @Component({
@@ -12,8 +11,7 @@ import { ListInvoiceService } from 'src/app/core/services/list-invoice/list-invo
 export class InvoiceFormComponent implements OnInit {
   invoice = new Invoice();
   tax: number;
-  constructor(private createInvoiceService: CreateInvoiceService, private listInvoiceService: ListInvoiceService,
-              private deleteInvoiceService: DeleteInvoiceService) { }
+  constructor(private createInvoiceService: CreateInvoiceService) { }
 
   ngOnInit(): void {
 
