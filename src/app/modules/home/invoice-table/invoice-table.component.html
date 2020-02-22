@@ -5,29 +5,19 @@
             <th scope="col text-light">Invoice Number</th>
             <th scope="col text-light">Net</th>
             <th scope="col text-light">% Tax</th>
-            <th scope="col text-light">Tax</th>
             <th scope="col text-light">Total</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
+            <tr *ngFor="let invoice of invoices.data">
+              <td>{{invoice.invoiceNumber}}</td>
+              <td>{{invoice.net.$numberDecimal}}</td>
+              <td>{{invoice.tax}}</td>
+              <td>{{invoice.total.$numberDecimal}}</td>
+            </tr>
+
+  
+
         </tbody>
       </table>
     </div>

@@ -9,13 +9,13 @@
         <div class="col-lg-2 col-xs-12">
             <div class="form-group">
                 <label >Net</label>
-                <input type="text" class="form-control" name="myDecimal"  [(ngModel)]="invoice.net">
+                <input type="text" class="form-control" name="myDecimal"  [(ngModel)]="invoice.net" >
             </div>
         </div>
         <div class="col-lg-2 col-xs-12">
             <div class="form-group">
                 <label >% Tax </label>
-                <select class="custom-select border border-secondary" [(ngModel)]="invoice.tax">
+                <select class="custom-select border border-secondary" [(ngModel)]="invoice.tax" >
                     <option selected>Select Tax %</option>
                     <option value="0">0 %</option>
                     <option value="10.5">10.5 %</option>
@@ -29,13 +29,13 @@
         <div class="col-lg-2 col-xs-12">
             <div class="form-group">
                 <label >Total</label>
-                <input type="text" readonly class="form-control" [(ngModel)]="invoice.total" >
+                <input type="text" readonly class="form-control" [ngModel]="invoice.total">
             </div>
         </div>
         <div class="col-lg-2 col-xs-12  d-flex align-items-end">
             <div class="form-group">
                 <button type="button" class="btn btn-outline-success mr-1" (click)="createInvoice()">Add</button>
-                <button type="button" class="btn btn-outline-danger mr-1">Clear</button>
+                <button type="button" class="btn btn-outline-danger mr-1"(click)="deleteInvoice()">Clear</button>
             </div>
         </div>
     </div>
