@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { CreateInvoiceService } from 'src/app/core/services/create-invoice/create-invoice.service';
 import Invoice from 'src/app/shared/models/invoice.model';
 import { ListInvoiceService } from 'src/app/core/services/list-invoice/list-invoice.service';
-import { DeleteInvoiceService } from 'src/app/core/services/delete-service/delete-invoice.service';
 
 
 @Component({
@@ -20,11 +19,6 @@ export class InvoiceFormComponent implements OnInit {
 
 }
   deleteInvoice() {
-    // this.listInvoiceService.listInvoice()
-    //   .subscribe((data) => {
-    //     const id = data.data.find(node =>  node.invoiceNumber == this.invoice.invoiceNumber)
-    //     this.deleteInvoiceService.deleteInvoice(id._id);
-    //   });
     this.invoice = new Invoice() ;
 
   }
