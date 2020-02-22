@@ -18,7 +18,7 @@ export class InvoiceTableComponent implements OnInit {
     this.listInvoiceService.listInvoice()
     .subscribe((data) => {
       this.invoices = data;
-    });  
+    });
   }
 
 }

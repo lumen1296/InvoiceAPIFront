@@ -20,12 +20,12 @@ export class InvoiceFormComponent implements OnInit {
 
 }
   deleteInvoice() {
-    this.listInvoiceService.listInvoice()
-      .subscribe((data) => {
-        const id = data.data.find(node =>  node.invoiceNumber == this.invoice.invoiceNumber)
-        this.deleteInvoiceService.deleteInvoice(id._id);
-      });
-
+    // this.listInvoiceService.listInvoice()
+    //   .subscribe((data) => {
+    //     const id = data.data.find(node =>  node.invoiceNumber == this.invoice.invoiceNumber)
+    //     this.deleteInvoiceService.deleteInvoice(id._id);
+    //   });
+    this.invoice = new Invoice() ;
 
   }
 

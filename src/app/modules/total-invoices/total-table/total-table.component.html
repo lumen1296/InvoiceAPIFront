@@ -1,4 +1,4 @@
-<div class="container  mt-5 table-responsive">
+<div class="container  mt-5 mb-5 table-responsive">
     <table class="table table-bordered ">
         <thead>
           <tr class="table-dark"> 
@@ -15,6 +15,24 @@
               <td>{{invoice.tax}}%</td>
               <td>{{invoice.total.$numberDecimal}}</td>
             </tr>
+
+  
+
+        </tbody>
+      </table>
+
+      <table class="table mt-5 table-bordered ">
+        <thead>
+          <tr class="table-dark"> 
+            <th scope="col text-light">Total Net</th>
+            <th scope="col text-light">Global Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr >
+            <td>{{total.data.totalNet}}</td>
+            <td>{{total.data.totalTotal}}</td>
+          </tr>
 
   
 
